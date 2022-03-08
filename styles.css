@@ -12,14 +12,14 @@ div{
 
 .entry-title{
   font-family: 'Press Start 2P', cursive;
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: #F6E7D8;
 }
 
 .btn{
   display: inline-block;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border: 10px solid black;
   border-radius: 20%;
   margin: 25px;
