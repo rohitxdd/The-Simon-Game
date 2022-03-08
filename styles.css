@@ -12,8 +12,9 @@ div{
 
 .entry-title{
   font-family: 'Press Start 2P', cursive;
-  font-size: 4.5rem;
+  font-size: 3rem;
   color: #F6E7D8;
+  padding-top:1rem;
 }
 
 .btn{
@@ -52,7 +53,7 @@ div{
 }
 
 footer{
-  padding-top: 58px;
+  padding-top: 10px;
   color: white;
   font-size: 1rem;
 }
