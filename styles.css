@@ -3,22 +3,33 @@ body{
   background-color: #011f3f;
 }
 .container{
-  width: 50%;
   margin: auto;
-}
-div{
-  display: block;
+  text-align: center;
 }
 
-.entry-title{
+div{
+  display: block;
+  position: relative;
+  justify-content: center ;
+}
+
+.entry-title , h2{
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   color: #F6E7D8;
-  padding-top:1rem;
+  padding-top: 1rem;
+}
+.btnn{
+  height: 80px;
+
 }
 
 .btn{
-  display: inline-block;
+  margin: 25px;
+  /* position: absolute; */
+}
+
+.bt{
   width: 200px;
   height: 200px;
   border: 10px solid black;
@@ -62,4 +73,29 @@ a{
   color: aliceblue;
   padding: 10px;
   font-size: 1.5rem;
+}
+
+.hidden{
+  display: none;
+}
+
+@media (max-width:600px) {
+  h1.entry-title{
+    font-size: 2rem;
+  }
+  .btn{
+    font-size: 1.5rem;
+  }
+
+  .bt{
+    margin: 7px;
+  }
+
+  footer{
+    padding-top: 25px;
+  }
+  .btnn{
+    padding-bottom: 10px;
+  }
+  
 }

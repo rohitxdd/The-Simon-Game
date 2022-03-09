@@ -2,6 +2,7 @@
 var userChosenPattern = [];
 var length = 0;
 
+// Array for randomly generated pattern
 var gamePattern = [];
 
 var buttonColors = ["green", "red", "blue", "yellow"];
@@ -22,7 +23,7 @@ function nextSquence(){
 
 // Detecting userInput 
 
-$(".btn").on("click", function(event){
+$(".bt").on("click", function(event){
     var userChosenColor = event.target.id;
     userChosenPattern.push(userChosenColor);
     var btnAudio = new Audio("sounds/"+userChosenColor+".mp3");
@@ -45,13 +46,14 @@ var level = 0;
 
 // Detecting key press to start Game 
 
-$("body").keypress(start);
+$(".btn").click(start);
 var started = false;
 function start(){
     if (!started){
         nextSquence();
         started = true;
     }
+    $(".btn").addClass("hidden");
 }
 
 // To Check answer 
@@ -61,12 +63,14 @@ function checkAnswer(currentLevel){
         if(userChosenPattern.length === gamePattern.length){
             setTimeout(nextSquence ,1000);
         }
-    }else{
+    }else if(started){
         $("body").addClass("game-over");
         var gameOver = new Audio("sounds/wrong.mp3");
         gameOver.play();
         setTimeout(()=>$("body").removeClass("game-over"),200);
-        $("h1").text("Game Over, Press Any Key to Restart");
+        $("h1").text("Game Over");
+        $(".btn").removeClass("hidden");
+        $(".btn").text("try again");
         started = false;
         level = 0;
         gamePattern = [];
